@@ -1,0 +1,159 @@
+/* CSS Variables with fallbacks */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #e74c3c;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --header-font: 'Montserrat', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+
+/* General Styling */
+body {
+    background-color: var(--background-color, #ffffff);
+    color: var(--text-color, #000000);
+    font-family: var(--body-font, Georgia, serif);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    /* RGB Color */
+    background-color: rgb(141, 182, 199);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.subtitle {
+    /* Hex color */
+    background-color: #90c9cf;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    /* HSL color */
+    background-color: hsl(190, 32%, 93%);
+    padding: 20px;
+}
+
+footer {
+    /* Named color */
+    background-color: cadetblue;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+nav {
+    /* Color mix */
+    background-color: color-mix(in srgb, lightcyan 60%, lightblue 40%);
+    padding: 10px;
+    margin: 10px 0;
+
+    position: sticky;
+    top: 20px;
+}
+
+nav a {
+    /* Wider-gamut color */
+    color: color(srgb 0.004 0.282 0.282);
+    margin: 0 10px;
+    text-decoration: none;
+
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+/* Box Model */
+section {
+    margin-bottom: 1em; 
+    padding: 1.5rem; 
+
+    border-style: solid;
+    border-color: #ddd;
+    border-width: 1px;
+    border-radius: 1.5vw;
+    background-color: #d5e3e8;
+}
+
+h1 {
+    font-size: 28px; 
+    margin-bottom: 15pt; 
+    letter-spacing: 0.1in; 
+}
+
+ol {
+    margin: 20px 15px 20px 30px;
+    display: block;
+}
+
+.subtitle h3 {
+    margin: auto;
+    max-width: 80%;
+}
+
+ul {
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+li {
+    padding: 5px 10px 5px 10px; 
+}
+
+/* Sizing */
+img, video {
+    width: 100%;
+    max-width: 560px;
+    min-width: 200px;
+    height: auto;
+}
+
+/* Pseudo-classes */
+nav a:hover {
+    color: #a0c3d2;
+    text-decoration: underline;
+}
+
+button:active {
+    background-color: #333;
+    color: white;
+}
+
+/* Flexbox Layout */
+.subtitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Grid Layout */
+form fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    justify-items: auto;
+    padding: 10px;
+}
+
+@media (max-width: 1250px){ 
+    .sidebar{ display:none; }
+    .flex-row{ flex-direction:column; }
+}
+
+/* Font */
+.montserrat-header {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 12;
+    font-style: normal;
+}
